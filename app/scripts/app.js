@@ -29,6 +29,11 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/ajax', {
+        templateUrl: 'views/ajax.html',
+        controller: 'AjaxCtrl',
+        controllerAs: 'ajax'
+      })
       .otherwise({
         redirectTo: '/'
       });
