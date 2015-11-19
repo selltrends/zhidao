@@ -10,7 +10,7 @@
 angular.module('zhidaoApp')
   .controller('AjaxCtrl', function ($scope, $http) {
     $scope.loadData = function (){
-      $http.get("scripts/models/productData.json").success(function (data){
+      $http.get("data/productData.json").success(function (data){
         $scope.products = data;
       });
     }
