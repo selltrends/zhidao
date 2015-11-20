@@ -34,6 +34,21 @@ angular
         controller: 'AjaxCtrl',
         controllerAs: 'ajax'
       })
+      .when('/discover', {
+        templateUrl: 'views/discover.html',
+        controller: 'DiscoverCtrl',
+        controllerAs: 'discover'
+      })
+      .when('/account', {
+        templateUrl: 'views/account.html',
+        controller: 'AccountCtrl',
+        controllerAs: 'account'
+      })
+      .when('/service', {
+        templateUrl: 'views/service.html',
+        controller: 'ServiceCtrl',
+        controllerAs: 'service'
+      })
       .otherwise({
         redirectTo: '/'
       });
