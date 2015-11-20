@@ -29,7 +29,7 @@ angular.module('zhidaoApp')
               category: product.attr('category'),
               price: product.attr('price')
             });
-          };
+          }
         });
       };
     });
