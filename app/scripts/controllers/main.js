@@ -9,11 +9,16 @@
  */
 angular.module('zhidaoApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.phone = 138003800;
-    $scope.addUser = function (userDetails) {
-      $scope.message = userDetails.name
-                        + " (" + userDetails.email + ") (" + userDetails.agreed + ")";
-}
+    $scope.loadData = function () {
+        var config = {
+          opt: "getcode",
+          t: new Date().getTime()
+        };
+        $http.get("/Ajax/Authentication.ashx",config).success(function (data) {
+          $scope.phone = data;
+        });
+    }
+    
     $scope.message = "Ready";
     $scope.matchPattern = new RegExp("^[\u4E00-\u9FA5][\da-zA-Z]{6}$");
 
