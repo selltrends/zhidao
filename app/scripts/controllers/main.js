@@ -9,6 +9,44 @@
  */
 angular.module('zhidaoApp')
   .controller('MainCtrl', function ($scope) {
+
+    var person ={}
+
+    $scope.person.newsletterOptIn = false;
+
+    $scope.person.channels = [
+      {value: "televesion", lablel: "Television"},
+      {value:"radio", label:"Radion"},
+      {value:"social-media", label:"Social Media"},
+      {value:"other", label:"Other"}
+    ];
+
+    $scope.person.register = fuction(){
+      $scope.firstNameInvalid = false;
+      $scope.lastNameInvalid = false;
+      $scope.emailInvalid = false;
+
+      if (!$scope.registrationForm.firstName.$invalid) {
+        $scope.firstNameInvalid = true;
+      }
+
+      if (!$scope.registrationForm.lastName.$invalid) {
+        $scope.lastNameInvalid = true;
+      }
+
+      if (!$scope.registrationForm.email.$invalid) {
+        $scope.emailInvalid = true;
+      }
+
+      if (!$scope.registrationForm.research.$invalid) {
+        $scope.researchInvalid = true;
+      }
+
+      if (!$scope.registrationForm.$invalid) {
+        $scope.doShow = true;
+      }
+    }
+
     $scope.loadData = function () {
         var config = {
           opt: "getcode",
@@ -18,7 +56,7 @@ angular.module('zhidaoApp')
           $scope.phone = data;
         });
     }
-    
+
     $scope.message = "Ready";
     $scope.matchPattern = new RegExp("^[\u4E00-\u9FA5][\da-zA-Z]{6}$");
 
