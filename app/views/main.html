@@ -14,12 +14,15 @@
                            ng-maxlength="6" ng-pattern="matchPattern">
       <div class="error"
       ng-show="myForm.hphm.$invalid && myForm.hphm.$dirty">
-                              <span ng-show="myForm.hphm.$error.pattern">
-                                  请输入有效的邮箱地址
-                              </span>
-                              <span ng-show="myForm.hphm.$error.required">
-                                  邮箱项目必填
-                              </span>
+        {{getError(myForm.hphm.$error)}}
+      </div>
+    </div>
+    <div class="form-group">
+      <label>注册邮件:</label>
+      <input name="userEmail" type="email" class="form-control"
+              required ng-model="newUser.email">
+      <div class="error" ng-show="myForm.userEmail.$invalid && myForm.userEmail.$dirty">
+          {{getError(myForm.userEmail.$error)}}
       </div>
     </div>
     <div class="form-group">
