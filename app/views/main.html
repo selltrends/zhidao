@@ -1,3 +1,49 @@
+ <style>
+  form .ng-invalid-required .ng-dirty { background-color: lightpink; }
+  form .ng-invalid-email .ng-invalid-pattern .ng-dirty { background-color: lightgoldenrodyellow; }
+  form .ng-valid.ng-dirty { background-color: lightgreen; }
+  span.summary.ng-invalid { color: red; font-weight: bold; }
+  span.summary.ng-valid { color: green; }
+  div.error {color: red; font-weight: bold;}
+</style>
+<div class="well" ng-controller="MainCtrl">
+  <form role="form" name="myForm" novalidate ng-submit="addUser(newUser)">
+    <div class="form-group">
+      <label for="hphm">输入车牌号:</label>
+      <input name="hphm" ng-model="hphm" type="text" value="输入车牌号" placeholder="桂A" class="form-control" id="hphm" required g-required="requireValue" ng-minlength="6"
+                           ng-maxlength="6" ng-pattern="matchPattern">
+      <div class="error"
+      ng-show="myForm.hphm.$invalid && myForm.hphm.$dirty">
+                              <span ng-show="myForm.hphm.$error.pattern">
+                                  请输入有效的邮箱地址
+                              </span>
+                              <span ng-show="myForm.hphm.$error.required">
+                                  邮箱项目必填
+                              </span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="pwd">预留手机号：</label>
+      <input type="text" class="form-control" id="pwd" ng-model="phone" readonly="readonly">
+    </div>
+    <div class="form-group">
+      <label>手机验证码</label>
+      <input type="text" class="form-control" id="pwd" required>
+    </div>
+    <button type="submit" class="btn btn-default" ng-click="CheckCode(newTodo)">查询</button>
+  </form>
+  <hr>
+  <div class="well">
+    <h3>温馨提示：</h3>
+    <ul>
+      <li>如发现手机号不对，请前往车管所修改联系手机号（非联系电话）</li>
+      <li>为了更方便快捷地服务于南宁近百万车主，限制发送频率为每1小时1条，感谢理解与支持</li>
+      <li>验证手机号码正确却无法接收验证短信，请致手机号码应的运营商客服，让其恢复您的106短信通道即可</li>
+    </ul>
+  </div>
+</div>
+
+
 <div class="jumbotron">
   <img src="images/logo.png" alt="" />
   <h1>车知道查询</h1>
