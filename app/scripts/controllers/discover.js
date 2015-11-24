@@ -8,10 +8,8 @@
  * Controller of the zhidaoApp
  */
 angular.module('zhidaoApp')
-  .controller('DiscoverCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('DiscoverCtrl', function ($scope, $http) {
+    $http.get('data/discover.json').success(function(data){
+      $scope.discovers = data;
+    })
   });

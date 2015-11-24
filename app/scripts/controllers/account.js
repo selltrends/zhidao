@@ -9,7 +9,6 @@
  */
  angular.module('zhidaoApp')
    .controller('AccountCtrl', function ($scope, $http) {
-     console.log('i am working');
      $http.get('data/account.json').success(function (data){
        $scope.accounts = data;
      });
