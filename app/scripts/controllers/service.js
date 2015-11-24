@@ -8,10 +8,8 @@
  * Controller of the zhidaoApp
  */
 angular.module('zhidaoApp')
-  .controller('ServiceCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('ServiceCtrl', function ($scope, $http) {
+    $http.get('data/service.json').success(function(data){
+      $scope.services = data;
+    })
   });
