@@ -10,6 +10,9 @@
 angular.module('zhidaoApp')
   .controller('MainCtrl', function ($scope) {
 
+    $scope.requireValue = true;
+    $scope.matchPattern = new RegExp("^[a-z]");
+
     $scope.todos = [
       {id:100,place:"Store",action:"Get groceries", complete:false},
       {id:200,place:"Home",action:"Call plumber",complete:false},

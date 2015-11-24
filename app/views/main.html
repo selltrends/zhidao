@@ -32,6 +32,9 @@ div.error { color: red; font-weight: bold; }
             Selected:{{selectValue || 'None'}}
           </p>
         </div>
+        <div class="form-group">
+          <textarea name="sample" ng-model="textValue" ng-required="requireValue" ng-minlength="3" ng-maxlength="10" ng-pattern="matchPattern" rows="8" cols="40"></textarea>
+        </div>
         <div class="checkbox">
           <label for="">
             <input type="checkbox" name="agree" ng-model="user.agree" required>
