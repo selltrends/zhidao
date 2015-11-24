@@ -4,9 +4,27 @@ form.validate .ng-invalid-email.ng-dirty {background-color: lightgoldenrodyellow
 div.error { color: red; font-weight: bold; }
 </style>
 <div class="well" ng-controller="MainCtrl">
-  <div class="panel">
+  <div class="panel panel-info">
+    <div class="panel-heading"><h3>南宁违章查询</h3></div>
+    <div class="panel-body">
+
     <form name="myForm" novalidate ng-submit="addUser(user)" ng-class="showValidation ? 'validate' :''">
       <div class="well">
+        <div class="form-group">
+          <label for="hphm">输入车牌号:</label>
+          <input name="hphm" ng-model="hphm" type="text" value="输入车牌号" placeholder="桂A" class="form-control" id="hphm" required  ng-pattern="matchPattern">
+          <div class="error" ng-show="showValidation">
+            {{getError(myForm.hphm.$error)}}
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="pwd">预留手机号：</label>
+          <input type="text" class="form-control" ng-model="phone" readonly="readonly">
+        </div>
+        <div class="form-group">
+          <label>手机验证码</label>
+          <input type="text" class="form-control" id="pwd" required>
+        </div>
         <div class="form-group">
           <label for="">Name:</label>
           <input type="text" name="name" class="form-control" required ng-model="user.name">
@@ -45,42 +63,12 @@ div.error { color: red; font-weight: bold; }
           </div>
         </div>
         <button type="submit" class="btn btn-primary btn-block">
-          OK
+          查询
         </button>
       </div>
 
     </form>
   </div>
-
-  <form role="form" name="notmyForm" novalidate ng-submit="addUser(newUser)">
-    <div class="form-group">
-      <label for="hphm">输入车牌号:</label>
-      <input name="hphm" ng-model="hphm" type="text" value="输入车牌号" placeholder="桂A" class="form-control" id="hphm" required g-required="requireValue" ng-minlength="6"
-                           ng-maxlength="6" ng-pattern="matchPattern">
-      <div class="error"
-      ng-show="myForm.hphm.$invalid && myForm.hphm.$dirty">
-        {{getError(myForm.hphm.$error)}}
-      </div>
-    </div>
-    <div class="form-group">
-      {{sphone}}
-      <label>注册邮件:</label>
-      <input name="userEmail" type="email" class="form-control"
-              required ng-model="newUser.email">
-      <div class="error" ng-show="myForm.userEmail.$invalid && myForm.userEmail.$dirty">
-          {{getError(myForm.userEmail.$error)}}
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="pwd">预留手机号：</label>
-      <input type="text" class="form-control" id="pwd" ng-model="phone" readonly="readonly">
-    </div>
-    <div class="form-group">
-      <label>手机验证码</label>
-      <input type="text" class="form-control" id="pwd" required>
-    </div>
-    <button type="submit" class="btn btn-default" ng-click="CheckCode(newTodo)">查询</button>
-  </form>
   <hr>
   <div class="well">
     <h3>温馨提示：</h3>
@@ -91,6 +79,7 @@ div.error { color: red; font-weight: bold; }
     </ul>
   </div>
 
+</div>
 
 
 </div>

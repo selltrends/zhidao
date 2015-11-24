@@ -11,7 +11,8 @@ angular.module('zhidaoApp')
   .controller('MainCtrl', function ($scope) {
 
     $scope.requireValue = true;
-    $scope.matchPattern = new RegExp("^[a-z]");
+    $scope.matchPattern = new RegExp("^[\u4E00-\u9FA5][\da-zA-Z]{6}$");
+    $scope.phone=13800138000;
 
     $scope.todos = [
       {id:100,place:"Store",action:"Get groceries", complete:false},
@@ -28,14 +29,14 @@ angular.module('zhidaoApp')
 
     }
 
-    $scope.message = "Ready";
-
     $scope.getError = function(error){
       if(angular.isDefined(error)){
         if(error.required){
           return "请填写";
         } else if(error.email){
           return "请输入有效邮件格式";
+        } else if(error.pattern){
+          return "没有这样的车牌号";
         }
       }
     }
