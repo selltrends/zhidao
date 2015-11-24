@@ -12,39 +12,11 @@
   </div>
 </div>
 
-<div class="well">
+<div class="well"  ng-controller="AccountCtrl">
   <ul class="list-group">
-    <li class="list-group-item">
-      <span class="badge">1</span>
-      <i class="fa fa-gear fa-lg fa-spin" style="color:#2F4F4F"></i> 账户信息
-    </li>
-    <li class="list-group-item">
-      <span class="badge">2</span>
-      <i class="fa fa-expeditedssl fa-lg" style="color:#B22222"></i> 安全提示
-    </li>
-    <li class="list-group-item">
-      <span class="badge">3</span>
-      <i class="fa fa-bell fa-lg" style="color:#4B0082"></i> 提示信息
-    </li>
-    <li class="list-group-item">
-      <span class="badge">4</span>
-      <i class="fa fa-gift fa-lg" style="color:#F08080"></i> 积分礼物
-    </li>
-    <li class="list-group-item">
-      <span class="badge">5</span>
-      <i class="fa fa-weixin fa-lg" style="color:#191970"></i> 微信分享
-    </li>
-    <li class="list-group-item">
-      <span class="badge">6</span>
-      <i class="fa fa-weibo fa-lg" style="color:#FF4500"></i> 转发微博
-    </li>
-    <li class="list-group-item">
-      <span class="badge">7</span>
-      <i class="fa fa-cart-plus fa-lg" style="color:#D87093"></i> 救急工具
-    </li>
-    <li class="list-group-item">
-      <span class="badge">14</span>
-      <i class="fa fa-car fa-lg" style="color:#2E8B57"></i> 我的爱车
+    <li class="list-group-item" ng-repeat="item in accounts">
+      <span class="badge">{{item.badge}}</span>
+      <i class="fa fa-{{item.icon}} fa-lg" style="color:{{item.color}}"></i> {{item.name}}
     </li>
   </ul>
 </div>
