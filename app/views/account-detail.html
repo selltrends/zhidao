@@ -1,9 +1,11 @@
-<div class="" ng-controller="AccountDetailCtrl">
-
+<div class="well">
   <h1>{{account.title}}</h1>
 
-  <p>{{account.content}}</p>
+<p>{{account.content}}</p>
 
-
-
+<ul class="account-thumbs">
+  <li ng-repeat="img in account.images">
+    <img ng-src="{{img}}">
+  </li>
+</ul>
 </div>
