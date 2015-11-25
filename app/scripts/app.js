@@ -44,6 +44,11 @@ angular
         controller: 'AccountCtrl',
         controllerAs: 'account'
       })
+      .when('/account/:accountId', {
+        templateUrl: 'views/account-detail.html',
+        controller: 'AccountDetailCtrl',
+        controllerAs: 'accountDetail'
+      })
       .when('/service', {
         templateUrl: 'views/service.html',
         controller: 'ServiceCtrl',

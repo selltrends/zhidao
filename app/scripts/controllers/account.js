@@ -13,3 +13,10 @@
        $scope.accounts = data;
      });
    });
+
+angular.module('zhidaoApp')
+    .controller('AccountDetailCtrl', function ($scope, $http, $routeParams) {
+      $http.get('data/'+ $routeParams.accountId + '.json').success(function (data){
+        $scope.account = data;
+      });
+    });

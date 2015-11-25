@@ -11,5 +11,5 @@ angular.module('zhidaoApp')
   .controller('ServiceCtrl', function ($scope, $http) {
     $http.get('data/service.json').success(function(data){
       $scope.services = data;
-    })
+    });
   });

@@ -27,7 +27,7 @@ angular.module('zhidaoApp')
         $scope.showValidation = true;
       }
 
-    }
+    };
 
     $scope.getError = function(error){
       if(angular.isDefined(error)){
@@ -39,6 +39,6 @@ angular.module('zhidaoApp')
           return "没有这样的车牌号";
         }
       }
-    }
+    };
 
   });

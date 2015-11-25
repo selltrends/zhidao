@@ -16,7 +16,7 @@
   <ul class="list-group">
     <li class="list-group-item" ng-repeat="item in accounts">
       <span class="badge">{{item.badge}}</span>
-      <i class="fa fa-{{item.icon}} fa-lg" style="color:{{item.color}}"></i> {{item.name}}
+      <i class="fa fa-{{item.icon}} fa-lg" style="color:{{item.color}}"></i> <a href="#/account/{{item.id}}">{{item.name}}</a>
     </li>
   </ul>
 </div>

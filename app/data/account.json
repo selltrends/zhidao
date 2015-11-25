@@ -1,47 +1,55 @@
 [
   {
+    "id":"account-info",
     "name": "账户信息",
     "icon": "gear",
     "color": "#2F4F4F",
     "badge": 10
   },
   {
+    "id":"account-safe",
     "name": "安全提示",
     "icon": "expeditedssl",
     "color": "#B22222",
     "badge": 7
   },
   {
+    "id":"account-warn",
     "name": "提示信息",
     "icon": "bell",
     "color": "#4B0082",
     "badge": 6
   },
   {
+    "id":"account-gift",
     "name": "积分礼物",
     "icon": "gift",
     "color": "#F08080",
     "badge": 3
   },
   {
+    "id":"account-weixin",
     "name": "微信分享",
     "icon": "weixin",
     "color": "#191970",
     "badge": 2
   },
   {
+    "id":"account-weibo",
     "name": "转发微博",
     "icon": "weibo",
     "color": "#FF4500",
     "badge": 4
   },
   {
+    "id":"account-tool",
     "name": "救急工具",
     "icon": "cart-plus",
     "color": "#D87093",
     "badge": 4
   },
   {
+    "id":"account-car",
     "name": "我的爱车",
     "icon": "car",
     "color": "#2E8B57",
