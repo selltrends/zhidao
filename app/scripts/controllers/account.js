@@ -15,9 +15,8 @@
    });
 
 angular.module('zhidaoApp')
-    .controller('AccountDetailCtrl', ['$scope', '$routeParams', '$http',
-  function($scope, $routeParams, $http) {
+    .controller('AccountDetailCtrl', function($scope, $routeParams, $http) {
     $http.get('data/' + $routeParams.accountId + '.json').success(function(data) {
       $scope.account = data;
     });
-  }]);
+  });

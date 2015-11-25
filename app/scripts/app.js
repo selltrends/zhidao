@@ -39,6 +39,11 @@ angular
         controller: 'DiscoverCtrl',
         controllerAs: 'discover'
       })
+      .when('/discover/:discoverId', {
+        templateUrl: 'views/discover-detail.html',
+        controller: 'DiscoverDetailCtrl',
+        controllerAs: 'discoverDetail'
+      })
       .when('/account', {
         templateUrl: 'views/account.html',
         controller: 'AccountCtrl',
@@ -53,6 +58,11 @@ angular
         templateUrl: 'views/service.html',
         controller: 'ServiceCtrl',
         controllerAs: 'service'
+      })
+      .when('/service/:serviceId', {
+        templateUrl: 'views/service-detail.html',
+        controller: 'ServiceDetailCtrl',
+        controllerAs: 'serviceDetail'
       })
       .otherwise({
         redirectTo: '/'

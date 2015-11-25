@@ -12,4 +12,9 @@ angular.module('zhidaoApp')
     $http.get('data/discover.json').success(function(data){
       $scope.discovers = data;
     });
+  })
+  .controller('DiscoverDetailCtrl', function ($scope, $http, $routeParams) {
+    $http.get('data/' + $routeParams.discoverId + '.json').success(function(data){
+      $scope.discover = data;
+    });
   });
