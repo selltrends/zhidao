@@ -1,12 +1,3 @@
 # zhidao
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.14.0.
-
-## Build & development
-
-Run `grunt` for building and `grunt serve` for preview.
-
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
+Nov.25 2015 have solved detail json content, next task todo restful/ajax json content
