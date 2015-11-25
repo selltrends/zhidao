@@ -1,1 +1,10 @@
-discover detail page{{discover}}
+<div class="jumbotron">
+  <h1>{{discover.title}}</h1>
+  <p>{{discover.content}}</p>
+  <ul class="account-thumbs">
+    <li ng-repeat="img in discover.images">
+      <img ng-src="{{img}}">
+    </li>
+  </ul>
+  <p><a class="btn btn-lg btn-success" ng-href="#/"><i class="fa fa-spinner fa-pulse"></i> 便捷查询</a></p>
+</div>

@@ -1,23 +1,27 @@
 [
   {
+    "id": "service-fin",
     "title": "保险金融",
     "icon": "chrome",
     "color": "#9ACD32",
     "content": "隶属广西知道控股集团，以最权威、最便捷、最准确、最全面、最安全为宗旨，致力于服务广大车友的应用"
   },
   {
+    "id": "service-biz",
     "title": "违章代办",
     "icon": "gg-circle",
     "color": "color:#2E8B57",
     "content": "工商银行南宁支行与知道集团达成战略投资意向，互联网金融为广大车主提供更便捷优惠的服务"
   },
   {
+    "id": "service-not",
     "title": "寻物启示",
     "icon": "bank",
     "color": "#5F9EA0",
     "content": "知道投资决定往南宁汽车租赁市场发力，年底前占据南宁租赁市场的五成以上"
   },
   {
+    "id": "service-ren",
     "title": "代驾租赁",
     "icon": "compass",
     "color": "#F08080",

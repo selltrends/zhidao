@@ -12,4 +12,9 @@ angular.module('zhidaoApp')
     $http.get('data/service.json').success(function(data){
       $scope.services = data;
     });
-  });
+  })
+  .controller('ServiceDetailCtrl', function ($scope, $http, $routeParams) {
+      $http.get('data/' + $routeParams.serviceId + '.json').success(function(data){
+        $scope.service = data;
+      });
+    });
