@@ -4,11 +4,36 @@ form.validate .ng-invalid-email.ng-dirty {background-color: lightgoldenrodyellow
 div.error { color: red; font-weight: bold; }
 </style>
 <div class="well">
+  <form class="form-horizontal" novalidate name="carForm">
+    <label for="">南宁违章查询</label>
+    <div ng-show="carForm.$invalid">您输入的信息有误，请仔细检查</div>
+    <div class="form-group">
+      <label class="col-xs-6 control-label">请输入您的车牌号:</label>
+      <div class="col-xs-6">
+        <input type="text" name="car.no" ng-model="carNo" value="桂A" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-xs-6 control-label">请检查您的手机号:</label>
+      <div class="col-xs-6">
+        <input type="text" name="car.no"  value="13800013000" readonly>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-xs-6 control-label">请输入验证码:</label>
+      <div class="col-xs-6">
+        <input type="text" name="name" value="" ng-model="car.sns">
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="well">
   <div class="panel panel-info">
     <div class="panel-heading"><h3>南宁违章查询</h3></div>
     <div class="panel-body">
 
-    <form name="myForm" novalidate ng-submit="addUser(user)" ng-class="showValidation ? 'validate' :''">
+    <form name="myForm" novalidate >
       <div class="well">
         <div class="form-group">
           <label for="hphm">输入车牌号:</label>
