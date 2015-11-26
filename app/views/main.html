@@ -6,294 +6,31 @@ div.error { color: red; font-weight: bold; }
 <div class="well">
   <form class="form-horizontal" novalidate name="carForm">
     <label for="">南宁违章查询</label>
-    <div ng-show="carForm.$invalid">您输入的信息有误，请仔细检查</div>
+    <div ng-show="">您输入的信息有误，请仔细检查</div>
     <div class="form-group">
       <label class="col-xs-6 control-label">请输入您的车牌号:</label>
       <div class="col-xs-6">
-        <input type="text" name="car.no" ng-model="carNo" value="桂A" required>
+        <input type="text" name="carNo" ng-model="main.carNo" value="桂A" required>
       </div>
     </div>
     <div class="form-group">
       <label class="col-xs-6 control-label">请检查您的手机号:</label>
       <div class="col-xs-6">
-        <input type="text" name="car.no"  value="13800013000" readonly>
+        <input type="text" name="main.carPhone"  value="13800013000" readonly>
       </div>
     </div>
     <div class="form-group">
       <label class="col-xs-6 control-label">请输入验证码:</label>
       <div class="col-xs-6">
-        <input type="text" name="name" value="" ng-model="car.sns">
+        <input type="text" name="" value="" ng-model="main.sns">
       </div>
     </div>
   </form>
 </div>
-
-<div class="well">
-  <div class="panel panel-info">
-    <div class="panel-heading"><h3>南宁违章查询</h3></div>
-    <div class="panel-body">
-
-    <form name="myForm" novalidate >
-      <div class="well">
-        <div class="form-group">
-          <label for="hphm">输入车牌号:</label>
-          <input name="hphm" ng-model="hphm" type="text" value="输入车牌号" placeholder="桂A" class="form-control" id="hphm" required  ng-pattern="matchPattern">
-          <div class="error" ng-show="showValidation">
-            {{getError(myForm.hphm.$error)}}
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="pwd">预留手机号：</label>
-          <input type="text" class="form-control" ng-model="phone" readonly="readonly">
-        </div>
-        <div class="form-group">
-          <label>手机验证码</label>
-          <input type="text" class="form-control" id="pwd" required>
-        </div>
-        <div class="form-group">
-          <label for="">Name:</label>
-          <input type="text" name="name" class="form-control" required ng-model="user.name">
-          <div class="error" ng-show="showValidation">
-            {{getError(myForm.name.$error)}}
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="">Email:</label>
-          <input type="email" name="email" class="form-control" required ng-model="user.email">
-          <div class="error" ng-show="showValidation">
-            {{getError(myForm.email.$error)}}
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="">Select an Action:</label>
-          <select ng-model="selectValue" ng-options="item.action group by item.place for item in todos">
-            <option value="">(Pick One)</option>
-          </select>
-        </div>
-        <div class="well">
-          <p>
-            Selected:{{selectValue || 'None'}}
-          </p>
-        </div>
-        <div class="form-group">
-          <textarea name="sample" ng-model="textValue" ng-required="requireValue" ng-minlength="3" ng-maxlength="10" ng-pattern="matchPattern" rows="8" cols="40"></textarea>
-        </div>
-        <div class="checkbox">
-          <label for="">
-            <input type="checkbox" name="agree" ng-model="user.agree" required>
-            I agree to the terms and conditions
-          </label>
-          <div class="error" ng-show="showValidation">
-            {{getError(myForm.agree.$error)}}
-          </div>
-        </div>
-        <button type="submit" class="btn btn-primary btn-block">
-          查询
-        </button>
-      </div>
-
-    </form>
-  </div>
-  <hr>
-  <div class="well">
-    <h3>温馨提示：</h3>
-    <ul>
-      <li>如发现手机号不对，请前往车管所修改联系手机号（非联系电话）</li>
-      <li>为了更方便快捷地服务于南宁近百万车主，限制发送频率为每1小时1条，感谢理解与支持</li>
-      <li>验证手机号码正确却无法接收验证短信，请致手机号码应的运营商客服，让其恢复您的106短信通道即可</li>
-    </ul>
-  </div>
-
-</div>
-
-
-</div>
-
 
 <div class="jumbotron">
   <img src="images/logo.png" alt="" />
   <h1>车知道查询</h1>
 
   <p><a class="btn btn-lg btn-success" ng-href="#/"><i class="fa fa-spinner fa-pulse"></i> 便捷查询</a></p>
-</div>
-
-<div class="row marketing">
-
-  <div class="panel-group" id="accordtion" role="tablist" aria-multiselectable="true">
-    <div class="panel panel-default">
-      <div class="panel-heading" role="tab" id="headingOne">
-        <h4 class="panel-title">
-          <a role="button" data-toggle="collapse" data-parent="#accordiion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            <i class="fa fa-car fa-lg" style="color:green"></i> 南宁违章查询
-          </a>
-        </h4>
-      </div>
-    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-      <div class="panel-body">
-        <form class="form-horizontal">
-          <div class="form-group">
-            <label for="" class="col-xs-4 control-label">输入车牌号</label>
-            <div class="col-xs-8">
-              <input type="email" class="form-control" id="inputEmail3" placeholder="桂A">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="" class="col-xs-4 control-label">验证码</label>
-            <div class="col-xs-8">
-              <input type="text" class="form-control" id="inputPassword3" placeholder="请输入手机验证码">
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-xs-offset-4 col-xs-8">
-              <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#wzcx">立即查询</button>
-            </div>
-          </div>
-        </form>
-        <!-- Modal -->
-<div class="modal fade" id="wzcx" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4><i class="fa fa-car"></i> 南宁违章快捷查询通道</h4>
-      </div>
-      <div class="modal-body">
-        <form role="form">
-          <div class="form-group">
-            <label for="psw"><i class="fa fa-car"></i> 请输入六位数车牌号</label>
-            <input type="number" class="form-control" id="psw" placeholder="桂A ">
-          </div>
-          <div class="form-group">
-            <label for="usrname"><span class="glyphicon glyphicon-user"></span> 预留手机号有误请往交管部门变更 <button type="button" class="btn btn-success"> 获取验证码</button></label>
-            <input type="text" class="form-control" id="usrname" placeholder="请输入交警预留手机号码验证码">
-          </div>
-          <button type="submit" class="btn btn-block">查询
-            <span class="glyphicon glyphicon-ok"></span>
-          </button>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
-          <span class="glyphicon glyphicon-remove"></span> 取消
-        </button>
-        <p>需要 <a href="#">帮助?</a></p>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal -->
-<div class="well">
-  <h4 class="text-danger">温馨提示：</h4>
-  <p>目前桂A南宁地区已经开通快捷查询功能</p>
-  <p>车辆实时信息以公安交警系统查询为准</p>
-</div>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          <i class="fa fa-bus fa-lg" style="color:green"></i> 全国违章查询
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        <form class="form-horizontal">
-          <div class="form-group">
-            <label for="" class="col-xs-4 control-label">查询城市</label>
-            <div class="col-xs-4">
-              <select id="province" name="province" class="form-control" onchange="changeProvince(this.value)">
-                        <option value="山东">山东</option>
-                        <option value="北京">北京</option><option value="上海">上海</option><option value="浙江">浙江</option><option value="福建">福建</option><option value="吉林">吉林</option><option value="辽宁">辽宁</option><option value="山东">山东</option><option value="河南">河南</option><option value="江苏">江苏</option><option value="陕西">陕西</option><option value="青海">青海</option><option value="广东">广东</option><option value="湖北">湖北</option><option value="黑龙江">黑龙江</option><option value="安徽">安徽</option><option value="云南">云南</option><option value="山西">山西</option><option value="海南">海南</option><option value="贵州">贵州</option><option value="新疆">新疆</option><option value="甘肃">甘肃</option><option value="宁夏">宁夏</option><option value="湖南">湖南</option><option value="西藏">西藏</option><option value="重庆">重庆</option>
-              </select>
-            </div>
-            <div class="col-xs-4">
-              <select id="city" name="city" class="form-control" onchange="changeCity(this.value)">
-                <option id="queryCity" value="青岛">青岛</option>
-                <option value="淄博">淄博</option><option value="青岛">青岛</option><option value="威海">威海</option><option value="枣庄">枣庄</option><option value="日照">日照</option><option value="临沂">临沂</option><option value="莱芜">莱芜</option><option value="菏泽">菏泽</option><option value="潍坊">潍坊</option><option value="聊城">聊城</option><option value="济宁">济宁</option><option value="滨州">滨州</option><option value="德州">德州</option><option value="东营">东营</option><option value="泰安">泰安</option><option value="烟台">烟台</option><option value="济南">济南</option><option value="滕州">滕州</option><option value="荣成">荣成</option><option value="莱州">莱州</option><option value="诸城">诸城</option><option value="蓬莱">蓬莱</option><option value="龙口">龙口</option><option value="寿光">寿光</option><option value="章丘">章丘</option><option value="胶州">胶州</option><option value="平度">平度</option><option value="招远">招远</option><option value="文登">文登</option><option value="邹城">邹城</option><option value="兖州">兖州</option><option value="乳山">乳山</option><option value="邹平县">邹平县</option><option value="新泰">新泰</option><option value="肥城">肥城</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="" class="col-xs-4 control-label">车辆类型</label>
-            <div class="col-xs-8">
-              <select class="form-control" id="carType" name="cartype">
-                <option value="">小型车</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="" class="col-xs-4 control-label">发动机号码</label>
-            <div class="col-xs-8">
-              <input type="text" class="form-control engineno" id="eno" placeholder="发动机号码" name="engineno" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="" class="col-xs-4 control-label">车架号码</label>
-            <div class="col-xs-8">
-              <input type="text" class="form-control classno" id="clo" placeholder="车架号码" name="classno" />
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-xs-offset-4 col-xs-8">
-              <input type="button" id="query" onclick="queryr()" class="btn btn-info btn-block" value="查询违章" />
-            </div>
-          </div>
-        </form>
-        <div class="well">
-          <h4 class="text-danger">温馨提示：</h4>
-          <p>该功能正在建设中，敬请期待。。。</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          <i class="fa fa-tags fa-lg" style="color:#FF4500"></i> 南宁拖车查询
-        </a>
-      </h4>
-    </div>
-    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-      <div class="panel-body">
-        <form class="form-horizontal">
-          <div class="form-group">
-            <label for="" class="col-xs-4 control-label">车辆类型</label>
-            <div class="col-xs-8">
-              <select class="form-control" id="carType" name="cartype">
-                <option value="">小型车</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="" class="col-xs-4 control-label">输入车牌号</label>
-            <div class="col-xs-8">
-              <input type="email" class="form-control" id="inputEmail3" placeholder="桂A">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="" class="col-xs-4 control-label">验证码</label>
-            <div class="col-xs-8">
-              <input type="text" class="form-control" id="inputPassword3" placeholder="请输入手机验证码">
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-xs-offset-4 col-xs-8">
-              <input type="button" id="query" onclick="queryr()" class="btn btn-info btn-block" value="查询违章" />
-            </div>
-          </div>
-        </form>
-        <div class="well">
-          <h4 class="text-danger">温馨提示：</h4>
-          <p>该功能正在建设中，敬请期待。。。</p>
-          <p>建设期间可以拨打0771-4882266查询拖车信息</p>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
