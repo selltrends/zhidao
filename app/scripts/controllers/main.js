@@ -14,7 +14,11 @@
        'AngularJS',
        'Karma'
      ];
-     this.carNo = 'A989899';
-     this.phone = '1289899';
-     this.sns = "Please";
+     this.test = 'show test';
+     $scope.carNo = 'A989899';
+     $scope.phone = '1289899';
+     $scope.sns = 'Please';
+     $scope.updateMessage = function(){
+       $scope.message = 'Hello ' + $scope.carNo +' ' + $scope.main.awesomeThings[1]+'. Your phone is ' + $scope.phone + '!';
+     }
    });
