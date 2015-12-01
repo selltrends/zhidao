@@ -14,7 +14,6 @@
        'AngularJS',
        'Karma'
      ];
-     this.test = 'show test';
      $scope.carNo = 'A989899';
      $scope.phone = '1289899';
      $scope.sns = 'Please';
